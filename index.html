@@ -1,0 +1,669 @@
+<!doctype html>
+<html class="dark" lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project TRUE NORTH | code06_merged-fork-2</title>
+
+    <!-- Tailwind (CDN) -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1152d4",
+              ink: "#070A12",
+              bg: "#101622",
+              panel: "#141D2D",
+              panel2: "#0F1522",
+            },
+            fontFamily: {
+              sans: ["Inter", "system-ui", "Segoe UI", "Apple SD Gothic Neo", "sans-serif"],
+              serif: ["Noto Serif KR", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Noto+Serif+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg-grad: linear-gradient(180deg, #070a12 0%, #101622 55%, #05070d 100%);
+        --hairline: #ffffff14;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: var(--bg-grad);
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+  </head>
+
+  <body class="font-sans text-white overflow-x-hidden">
+    <!-- Header (u0D3u / 6r3lf) -->
+    <header
+      class="fixed top-0 z-50 w-full border-b border-[color:var(--hairline)] bg-[rgba(7,10,18,0.9)]"
+    >
+      <div class="mx-auto flex h-[72px] max-w-[1200px] items-center justify-between px-6 md:px-10 xl:px-0">
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary text-[24px] leading-none">explore</span>
+          <span class="text-[16px] font-semibold leading-[19px] tracking-[0.2px]">Project TRUE NORTH</span>
+        </div>
+
+        <div class="flex items-center gap-8">
+          <nav class="hidden md:flex items-center gap-7">
+            <a
+              href="#philosophy"
+              class="text-[13px] font-semibold leading-[16px] tracking-[0.8px] text-[#FFFFFF99] hover:text-white"
+              >Our Philosophy</a
+            >
+            <a href="#programs" class="text-[13px] font-bold leading-[16px] tracking-[0.8px] text-white hover:text-white"
+              >Programs</a
+            >
+            <a
+              href="#faculty"
+              class="text-[13px] font-semibold leading-[16px] tracking-[0.8px] text-[#FFFFFF99] hover:text-white"
+              >Faculty</a
+            >
+            <a
+              href="#contact"
+              class="text-[13px] font-semibold leading-[16px] tracking-[0.8px] text-[#FFFFFF99] hover:text-white"
+              >Contact</a
+            >
+          </nav>
+
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdTn8zh9IeVab-R42oF6GtZfQ-N-zag25Wy_SMYdHLayJrRlQ/viewform?usp=publish-editor"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex h-10 items-center justify-center rounded-md bg-primary px-5 text-[13px] font-bold leading-[16px] tracking-[0.6px] text-white hover:bg-[#0f49c0]"
+            >Apply Now</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main class="pt-[72px]">
+      <!-- Hero (yQX73 / mw536) -->
+      <section class="bg-bg py-24">
+        <div class="mx-auto max-w-[1200px] px-6 md:px-10 xl:px-0">
+          <div
+            class="relative h-[600px] w-full overflow-hidden rounded-xl border border-[#FFFFFF0D] p-16"
+            style="
+              background-image: linear-gradient(#101622cc 0%, #101622f5 100%),
+                url('images/ref-hero-abstract.png');
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+            "
+          >
+            <div class="flex h-full flex-col items-center justify-center gap-9 text-center">
+              <div class="flex flex-col items-center gap-4">
+                <div class="text-primary text-[12px] font-bold leading-[15px] tracking-[3.4px]">ACADEMIC EXCELLENCE</div>
+                <h1 class="font-serif text-[64px] font-bold leading-[1.06] tracking-[-1.2px]">
+                  입시를 버리고,<br />
+                  유학 이후를 준비합니다.
+                </h1>
+                <p class="max-w-[720px] text-[18px] leading-[1.65] text-[#FFFFFFB3]">
+                  유학 합격이 아닌<br />
+                  유학생으로 살아갈 실력을 만드는 교육<br />
+                  Project TRUE NORTH
+                </p>
+              </div>
+
+              <div class="flex flex-wrap items-center justify-center gap-4">
+                <a
+                  href="#philosophy"
+                  class="inline-flex h-[54px] items-center justify-center rounded-md bg-primary px-[30px] text-[15px] font-bold leading-[22px] tracking-[0.4px] text-white hover:bg-[#0f49c0]"
+                  >이 교육의 철학 보기</a
+                >
+                <a
+                  href="#"
+                  class="inline-flex h-[54px] items-center justify-center rounded-md border border-[#FFFFFF33] bg-[#FFFFFF1A] px-[30px] text-[15px] font-bold leading-[22px] tracking-[0.4px] text-white hover:bg-white/20"
+                  >이 수업이 맞는지 확인하기</a
+                >
+              </div>
+
+              <div class="flex flex-wrap items-center justify-center gap-3">
+                <span
+                  class="rounded-full border border-[#FFFFFF1A] bg-[#FFFFFF0D] px-[14px] py-[10px] text-[12px] font-semibold leading-[17px] tracking-[0.4px]"
+                  >STAGE 1 · 공부를 다시 배우는 단계</span
+                >
+                <span
+                  class="rounded-full border border-[#FFFFFF1A] bg-[#FFFFFF0D] px-[14px] py-[10px] text-[12px] font-semibold leading-[17px] tracking-[0.4px]"
+                  >STAGE 2 · 생각의 깊이를 만드는 단계</span
+                >
+                <span
+                  class="rounded-full border border-[#FFFFFF1A] bg-[#FFFFFF0D] px-[14px] py-[10px] text-[12px] font-semibold leading-[17px] tracking-[0.4px]"
+                  >STAGE 3 · 유학 이후를 준비하는 단계</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hero Top (oxpgZ) -->
+      <section id="philosophy" class="bg-bg py-20 scroll-mt-[96px]">
+        <div class="mx-auto max-w-[960px] px-6 md:px-10 xl:px-0 text-center">
+          <h2 class="font-serif text-[64px] font-bold leading-[92px]">OUR PHILOSOPHY</h2>
+          <p class="mt-6 max-w-[672px] mx-auto text-[18px] font-light leading-[1.6] text-[#9AA8BD]">
+            Beyond the admission letter. We cultivate the intellectual resilience required to thrive in the world's most
+            demanding academic environments.
+          </p>
+        </div>
+      </section>
+
+      <!-- Main Hero Image (gqPMk / 344B5 / okgGA) -->
+      <section class="bg-bg py-5">
+        <div class="mx-auto max-w-[1200px] px-6 md:px-10 xl:px-0">
+          <div
+            class="h-[500px] w-full overflow-hidden rounded-xl"
+            style="
+              background-image: linear-gradient(
+                  180deg,
+                  rgba(16, 22, 34, 0.25) 0%,
+                  rgba(16, 22, 34, 0.8) 60%,
+                  rgba(5, 7, 13, 0.95) 100%
+                ),
+                url('images/ref-arch-corridor.png');
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+            "
+          ></div>
+          <div class="flex items-center justify-between py-2">
+            <span class="text-[12px] font-bold leading-[15px] tracking-[1.4px] text-[#8FA0B8]">The Essence of Rigor</span>
+            <span class="text-[12px] font-bold leading-[15px] tracking-[1.4px] text-[#8FA0B8]">Established 2024</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Differentiation (5kesD) -->
+      <section class="bg-bg py-24">
+        <div class="mx-auto max-w-[1000px] px-6 md:px-10 xl:px-0">
+          <div class="flex flex-col items-center gap-4 text-center">
+            <h2 class="font-serif text-[34px] font-bold leading-[49px] tracking-[-0.6px]">우리는 유학 컨설팅을 하지 않습니다</h2>
+            <p class="text-[16px] leading-[19px] text-[#FFFFFF80]">Project TRUE NORTH vs Traditional Consulting</p>
+          </div>
+
+          <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Legacy -->
+            <div class="rounded-xl border border-[#FFFFFF1A] bg-[#FFFFFF0D] p-8">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[20px] text-red-500">cancel</span>
+                <span class="text-[20px] font-bold leading-[29px] text-[#FFFFFF80]">대치동 유학 학원</span>
+              </div>
+              <div class="mt-6 flex flex-col gap-4">
+                <div class="flex gap-3">
+                  <span class="w-[9px] pt-[4px] text-[16px] leading-[24px] text-[#EF4444]">•</span>
+                  <span class="flex-1 text-[16px] leading-[24px] text-[#FFFFFFB3]">입시 전략</span>
+                </div>
+                <div class="flex gap-3">
+                  <span class="w-[9px] pt-[4px] text-[16px] leading-[24px] text-[#EF4444]">•</span>
+                  <span class="flex-1 text-[16px] leading-[24px] text-[#FFFFFFB3]">점수 관리</span>
+                </div>
+                <div class="flex gap-3">
+                  <span class="w-[9px] pt-[4px] text-[16px] leading-[24px] text-[#EF4444]">•</span>
+                  <span class="flex-1 text-[16px] leading-[24px] text-[#FFFFFFB3]">합격 중심</span>
+                </div>
+                <div class="flex gap-3">
+                  <span class="w-[9px] pt-[4px] text-[16px] leading-[24px] text-[#EF4444]">•</span>
+                  <span class="flex-1 text-[16px] leading-[24px] text-[#FFFFFFB3]">정답 제공</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- TRUE NORTH -->
+            <div class="rounded-xl shadow-[0_0_0_2px_#1152D433]">
+              <div class="rounded-xl border border-[#1152D44D] bg-[#1152D41A] p-8">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-[20px] text-primary">check_circle</span>
+                  <span class="text-[20px] font-bold leading-[28px] text-primary">Project TRUE NORTH</span>
+                </div>
+                <div class="mt-6 flex flex-col gap-4">
+                  <div class="flex gap-3">
+                    <span class="w-[9px] pt-[4px] text-[16px] leading-[24px] text-primary">•</span>
+                    <span class="flex-1 text-[16px] leading-[24px] text-white">사고 구조</span>
+                  </div>
+                  <div class="flex gap-3">
+                    <span class="w-[9px] pt-[4px] text-[16px] leading-[24px] text-primary">•</span>
+                    <span class="flex-1 text-[16px] leading-[24px] text-white">학습 자립</span>
+                  </div>
+                  <div class="flex gap-3">
+                    <span class="w-[9px] pt-[4px] text-[16px] leading-[24px] text-primary">•</span>
+                    <span class="flex-1 text-[16px] leading-[24px] text-white">유학 이후</span>
+                  </div>
+                  <div class="flex gap-3">
+                    <span class="w-[9px] pt-[4px] text-[16px] leading-[24px] text-primary">•</span>
+                    <span class="flex-1 text-[16px] leading-[24px] text-white">질문 설계</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="mt-12 text-center font-serif text-[20px] font-bold leading-[1.4] tracking-[-0.4px] text-[#FFFFFFB3]">
+            합격은 목표가 아니라<br />
+            과정 중 하나일 뿐입니다.
+          </p>
+        </div>
+      </section>
+
+      <!-- Problem (cKqsk) -->
+      <section class="bg-bg py-20">
+        <div class="mx-auto max-w-[1200px] px-6 md:px-10 xl:px-0 text-center">
+          <div class="text-primary text-[14px] font-bold leading-[17px]">THE PROBLEM</div>
+          <h2 class="mt-4 font-serif text-[40px] font-bold leading-[1.12] tracking-[-0.8px]">
+            왜 많은 학생들이 유학을 가서 무너질까요?
+          </h2>
+          <p class="mx-auto mt-4 max-w-[672px] text-[17px] leading-[1.7] text-[#FFFFFF99]">
+            점수는 충분했지만 수업을 이해하지 못하고,<br />
+            토론에서 말하지 못하고,<br />
+            에세이 앞에서 멈춰 서는 학생들.<br />
+            유학의 실패는 입학이 아니라<br />
+            준비의 방식에서 시작됩니다.
+          </p>
+        </div>
+      </section>
+
+      <!-- Program Overview (MjdZk) -->
+      <section class="border-y border-[color:var(--hairline)] bg-panel2 py-24">
+        <div class="mx-auto max-w-[1200px] px-6 md:px-10 xl:px-0">
+          <div class="flex flex-col gap-3">
+            <div class="text-primary text-[12px] font-bold leading-[15px] tracking-[3.4px]">PROGRAM OVERVIEW</div>
+            <h2 class="font-serif text-[44px] font-bold leading-[1.15] tracking-[-0.6px]">
+              TRUE NORTH 프로그램은 이렇게 다릅니다
+            </h2>
+            <p class="text-[16px] font-semibold leading-[1.8] text-[#FFFFFFB3]">
+              • 공부를 다시 배우는 단계<br />
+              • 사고의 깊이를 만드는 단계<br />
+              • 유학 이후를 준비하는 단계
+            </p>
+            <p class="text-[18px] leading-[1.6] text-[#FFFFFF99]">과목이 아니라 성장의 흐름으로 설계된 프로그램</p>
+          </div>
+
+          <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div class="rounded-xl border border-[color:var(--hairline)] bg-bg p-6">
+              <div class="flex flex-col gap-2.5">
+                <div class="text-primary text-[12px] font-bold leading-[15px] tracking-[2.4px]">STAGE 1</div>
+                <div class="font-serif text-[22px] font-bold leading-[32px] tracking-[-0.4px]">공부를 다시 배우는 단계</div>
+              </div>
+            </div>
+            <div class="rounded-xl border border-[color:var(--hairline)] bg-bg p-6">
+              <div class="flex flex-col gap-2.5">
+                <div class="text-primary text-[12px] font-bold leading-[15px] tracking-[2.4px]">STAGE 2</div>
+                <div class="font-serif text-[22px] font-bold leading-[32px] tracking-[-0.4px]">생각의 깊이를 만드는 단계</div>
+              </div>
+            </div>
+            <div class="rounded-xl border border-[color:var(--hairline)] bg-bg p-6">
+              <div class="flex flex-col gap-2.5">
+                <div class="text-primary text-[12px] font-bold leading-[15px] tracking-[2.4px]">STAGE 3</div>
+                <div class="font-serif text-[22px] font-bold leading-[32px] tracking-[-0.4px]">유학 이후를 준비하는 단계</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <a
+              href="#programs"
+              class="inline-flex h-[54px] items-center justify-center rounded-md bg-primary px-[30px] text-[15px] font-bold leading-[22px] tracking-[0.4px] text-white hover:bg-[#0f49c0]"
+              >프로그램 자세히 보기</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Stages Detail (GfRAa) -->
+      <section id="programs" class="bg-bg py-24 scroll-mt-[96px]">
+        <div class="mx-auto max-w-[1200px] px-6 md:px-10 xl:px-0">
+          <div class="flex flex-col gap-3">
+            <div class="text-primary text-[13px] font-bold leading-[16px] tracking-[2.4px]">CURRICULUM</div>
+            <h2 class="font-serif text-[44px] font-bold leading-[63px] tracking-[-0.6px]">STAGE 1-3 상세 커리큘럼</h2>
+            <p class="max-w-[760px] text-[18px] leading-[1.6] text-[#FFFFFFB3]">과목이 아니라 성장의 흐름으로 설계된 프로그램입니다.</p>
+          </div>
+
+          <div class="mt-10 flex flex-col gap-6">
+            <!-- Stage 1 -->
+            <div class="rounded-xl border border-[color:var(--hairline)] bg-panel p-8">
+              <div class="flex gap-8">
+                <div class="w-[240px] flex flex-col gap-3">
+                  <div class="text-primary text-[13px] font-bold leading-[16px] tracking-[2.4px]">STAGE 1</div>
+                  <div class="text-[56px] font-extrabold leading-[68px] tracking-[-1px] text-[#FFFFFF1A]">01</div>
+                  <div class="h-12 w-12 rounded-xl border border-[#1152D433] bg-[#1152D41A] grid place-items-center">
+                    <span class="material-symbols-outlined text-primary text-[24px] leading-none">history_edu</span>
+                  </div>
+                </div>
+                <div class="flex-1 flex flex-col gap-3.5">
+                  <div class="font-serif text-[28px] font-bold leading-[40px]">공부를 다시 배우는 단계</div>
+                  <p class="text-[16px] leading-[1.65] text-[#FFFFFFB3]">점수 중심의 학습에서 벗어나 영어를 사고의 도구로 사용하는 훈련.</p>
+                  <p class="text-[16px] font-semibold leading-[1.8] text-white">
+                    • 아카데믹 리딩<br />
+                    • 논리적 글쓰기<br />
+                    • 질문 설계 훈련
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stage 2 -->
+            <div class="rounded-xl border border-[color:var(--hairline)] bg-panel p-8">
+              <div class="flex gap-8">
+                <div class="w-[240px] flex flex-col gap-3">
+                  <div class="text-primary text-[13px] font-bold leading-[16px] tracking-[2.4px]">STAGE 2</div>
+                  <div class="text-[56px] font-extrabold leading-[68px] tracking-[-1px] text-[#FFFFFF1A]">02</div>
+                  <div class="h-12 w-12 rounded-xl border border-[#1152D433] bg-[#1152D41A] grid place-items-center">
+                    <span class="material-symbols-outlined text-primary text-[24px] leading-none">travel_explore</span>
+                  </div>
+                </div>
+                <div class="flex-1 flex flex-col gap-3.5">
+                  <div class="font-serif text-[28px] font-bold leading-[40px]">생각의 깊이를 만드는 단계</div>
+                  <p class="text-[16px] leading-[1.65] text-[#FFFFFFB3]">
+                    관심 분야를 찾고<br />
+                    문제를 설정하고<br />
+                    주장을 설계하는 힘을 기릅니다.
+                  </p>
+                  <p class="text-[16px] font-semibold leading-[1.8] text-white">
+                    • 리서치 기반 사고 훈련<br />
+                    • 비판적 분석<br />
+                    • 토론 중심 수업
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stage 3 -->
+            <div class="rounded-xl border border-[color:var(--hairline)] bg-panel p-8">
+              <div class="flex gap-8">
+                <div class="w-[240px] flex flex-col gap-3">
+                  <div class="text-primary text-[13px] font-bold leading-[16px] tracking-[2.4px]">STAGE 3</div>
+                  <div class="text-[56px] font-extrabold leading-[68px] tracking-[-1px] text-[#FFFFFF1A]">03</div>
+                  <div class="h-12 w-12 rounded-xl border border-[#1152D433] bg-[#1152D41A] grid place-items-center">
+                    <span class="material-symbols-outlined text-primary text-[24px] leading-none">forum</span>
+                  </div>
+                </div>
+                <div class="flex-1 flex flex-col gap-3.5">
+                  <div class="font-serif text-[28px] font-bold leading-[40px]">유학 이후를 준비하는 단계</div>
+                  <p class="text-[16px] leading-[1.65] text-[#FFFFFFB3]">실제 해외 대학 수업을 기준으로 세미나·에세이·피드백을 경험합니다.</p>
+                  <p class="text-[16px] font-semibold leading-[1.8] text-white">
+                    • 대학 수업 시뮬레이션<br />
+                    • 장문 에세이<br />
+                    • 토론 &amp; 비판 훈련
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How We Teach (mb6yT) -->
+      <section class="bg-panel py-24">
+        <div class="mx-auto max-w-[1200px] px-6 md:px-10 xl:px-0">
+          <div class="flex flex-col gap-3">
+            <div class="text-primary text-[13px] font-bold leading-[16px] tracking-[2.4px]">HOW WE TEACH</div>
+            <h2 class="font-serif text-[44px] font-bold leading-[1.15] tracking-[-0.6px]">
+              TRUE NORTH의 수업은<br />
+              불편함에서 시작됩니다
+            </h2>
+            <p class="max-w-[760px] text-[18px] leading-[1.6] text-[#FFFFFFB3]">
+              정답을 받는 수업이 아니라, 질문하고 사고하는 근육을 만드는 수업입니다.
+            </p>
+          </div>
+
+          <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="flex flex-col gap-6">
+              <div class="flex flex-col gap-3 rounded-xl border border-[color:var(--hairline)] bg-bg p-6">
+                <span class="material-symbols-outlined text-primary text-[24px] leading-none">verified</span>
+                <div class="text-[16px] font-bold leading-[23px]">정답을 주지 않습니다</div>
+                <p class="text-[14px] leading-[1.6] text-[#FFFFFFB3]">
+                  정답 대신 근거를 세우고, 스스로 검증하는 힘을 기릅니다.
+                </p>
+              </div>
+              <div class="flex flex-col gap-3 rounded-xl border border-[color:var(--hairline)] bg-bg p-6">
+                <span class="material-symbols-outlined text-primary text-[24px] leading-none">help</span>
+                <div class="text-[16px] font-bold leading-[23px]">질문을 만들게 합니다</div>
+                <p class="text-[14px] leading-[1.6] text-[#FFFFFFB3]">
+                  좋은 질문이 좋은 연구의 시작입니다. 질문의 구조부터 설계합니다.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-6">
+              <div class="flex flex-col gap-3 rounded-xl border border-[color:var(--hairline)] bg-bg p-6">
+                <span class="material-symbols-outlined text-primary text-[24px] leading-none">record_voice_over</span>
+                <div class="text-[16px] font-bold leading-[23px]">사고를 말로 드러내게 합니다</div>
+                <p class="text-[14px] leading-[1.6] text-[#FFFFFFB3]">
+                  글과 토론으로 논리를 세우고, 타인 앞에서 사고를 검증합니다.
+                </p>
+              </div>
+              <div class="flex flex-col gap-3 rounded-xl border border-[color:var(--hairline)] bg-bg p-6">
+                <span class="material-symbols-outlined text-primary text-[24px] leading-none">fact_check</span>
+                <div class="text-[16px] font-bold leading-[23px]">틀린 논리를 끝까지 점검합니다</div>
+                <p class="text-[14px] leading-[1.6] text-[#FFFFFFB3]">
+                  좋아 보이는 주장도 끝까지 밀어붙여, 논증의 약점을 스스로 찾게 합니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-10 rounded-xl bg-primary px-8 py-7">
+            <div class="flex flex-col gap-2">
+              <div class="text-[12px] font-bold leading-[15px] tracking-[2.4px] text-[#FFFFFFCC]">KEY MESSAGE</div>
+              <div class="font-serif text-[28px] font-bold leading-[1.2]">
+                이 불편함을 견디는 힘이<br />
+                유학에서 살아남는 힘이 됩니다.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Instructors (4mDyG) -->
+      <section id="faculty" class="bg-bg py-14 scroll-mt-[96px]">
+        <div class="mx-auto max-w-[1200px] px-6 md:px-10 xl:px-0">
+          <div class="flex items-end justify-between gap-8">
+            <div class="flex flex-col gap-2.5">
+              <h2 class="font-serif text-[44px] font-bold leading-[63px] tracking-[-0.6px]">누가 가르치는가가 전부입니다</h2>
+              <p class="max-w-[760px] text-[16px] leading-[1.65] text-[#FFFFFFB3]">
+                TRUE NORTH의 수업은 학원 강사가 아닌 실제 글로벌 현장에서 교육과 연구를 해온 교육자들이 직접 설계하고
+                진행합니다.
+              </p>
+            </div>
+            <a href="#" class="hidden md:inline text-[16px] font-bold leading-[23px] text-primary hover:text-[#0f49c0]"
+              >교육진 소개 →</a
+            >
+          </div>
+
+          <div class="mt-6 flex flex-col gap-6 md:flex-row md:justify-between md:gap-0">
+            <!-- Card 1 -->
+            <div class="relative h-[520px] w-full overflow-hidden rounded-xl md:w-[357px]">
+              <img
+                class="absolute inset-0 h-full w-full object-cover"
+                src="images/ref-portrait-jonathan.png"
+                alt="Dr. Jonathan K."
+              />
+              <div
+                class="absolute inset-x-0 bottom-0 h-[220px]"
+                style="
+                  background: linear-gradient(180deg, #10162200 0%, #101622d8 65%, #101622f2 100%);
+                "
+              ></div>
+              <div class="absolute left-[18px] top-[360px]">
+                <div class="text-primary text-[12px] font-bold leading-[15px]">Director</div>
+                <div class="mt-[7px] text-[24px] font-bold leading-[29px]">Dr. Jonathan K.</div>
+                <div class="mt-[3px] text-[14px] leading-[17px] text-[#9BACCA]">Harvard Graduate School, Education</div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="relative h-[520px] w-full overflow-hidden rounded-xl md:w-[357px]">
+              <img
+                class="absolute inset-0 h-full w-full object-cover"
+                src="images/ref-portrait-sarah.png"
+                alt="Sarah L. Miller"
+              />
+              <div
+                class="absolute inset-x-0 bottom-0 h-[220px]"
+                style="
+                  background: linear-gradient(180deg, #10162200 0%, #101622d8 65%, #101622f2 100%);
+                "
+              ></div>
+              <div class="absolute left-[18px] top-[360px]">
+                <div class="text-primary text-[12px] font-bold leading-[15px]">Senior Fellow</div>
+                <div class="mt-[7px] text-[24px] font-bold leading-[29px]">Sarah L. Miller</div>
+                <div class="mt-[3px] text-[14px] leading-[17px] text-[#9BACCA]">Oxford University, Philosophy</div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="relative h-[520px] w-full overflow-hidden rounded-xl md:w-[357px]">
+              <img class="absolute inset-0 h-full w-full object-cover" src="images/ref-portrait-david.png" alt="David Sung" />
+              <div
+                class="absolute inset-x-0 bottom-0 h-[220px]"
+                style="
+                  background: linear-gradient(180deg, #10162200 0%, #101622d8 65%, #101622f2 100%);
+                "
+              ></div>
+              <div class="absolute left-[18px] top-[360px]">
+                <div class="text-primary text-[12px] font-bold leading-[15px]">Academic Lead</div>
+                <div class="mt-[7px] text-[24px] font-bold leading-[29px]">David Sung</div>
+                <div class="mt-[3px] text-[14px] leading-[17px] text-[#9BACCA]">UPenn, Comparative Literature</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Target (1KBx8) -->
+      <section class="bg-bg py-24">
+        <div class="mx-auto max-w-[1200px] px-6 md:px-10 xl:px-0">
+          <div class="flex flex-col gap-3">
+            <div class="text-primary text-[13px] font-bold leading-[16px] tracking-[2.4px]">TARGET</div>
+            <h2 class="font-serif text-[44px] font-bold leading-[1.15] tracking-[-0.6px]">
+              이 수업은 모두를 위한 수업이 아닙니다
+            </h2>
+          </div>
+
+          <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="rounded-xl border border-[color:var(--hairline)] bg-panel p-7">
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-primary text-[20px] leading-none">check_circle</span>
+                <div class="text-[18px] font-bold leading-[26px]">이런 학생에게 적합합니다</div>
+              </div>
+              <p class="mt-4 text-[16px] leading-[1.7] text-[#FFFFFFB3]">
+                • 진짜 실력을 만들고 싶은 학생<br />
+                • 유학 이후가 두려운 학생<br />
+                • 질문하고 사고하는 훈련을 원하는 학생
+              </p>
+            </div>
+
+            <div class="rounded-xl border border-[color:var(--hairline)] bg-panel p-7">
+              <div class="flex items-center gap-2.5">
+                <span class="material-symbols-outlined text-red-500 text-[20px] leading-none">cancel</span>
+                <div class="text-[18px] font-bold leading-[26px]">이런 경우에는 맞지 않습니다</div>
+              </div>
+              <p class="mt-4 text-[16px] leading-[1.7] text-[#FFFFFFB3]">
+                • 단기 합격만 원하는 경우<br />
+                • 정답만 빠르게 얻고 싶은 경우
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Final CTA (WVs6j) -->
+      <section id="apply" class="bg-bg py-32 scroll-mt-[96px]">
+        <div class="mx-auto max-w-[1200px] px-6 md:px-10 xl:px-0 text-center">
+          <div class="text-primary text-[12px] font-bold leading-[15px] tracking-[2.6px]">NEXT STEP</div>
+          <h2 class="mt-6 font-serif text-[44px] font-bold leading-[1.15] tracking-[-0.6px]">
+            상담이 아닙니다.<br />
+            함께할 수 있는지 먼저 확인합니다.
+          </h2>
+          <p class="mx-auto mt-6 max-w-[760px] text-[18px] leading-[1.6] text-[#FFFFFFB3]">
+            사전 인터뷰는 상담이 아니라,<br />
+            함께할 수 있는지 확인하는 절차입니다.<br />
+            구글 폼 또는 카톡 채널로 신청해 주세요.
+          </p>
+
+          <div class="mt-6 flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdTn8zh9IeVab-R42oF6GtZfQ-N-zag25Wy_SMYdHLayJrRlQ/viewform?usp=publish-editor"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex h-[60px] items-center justify-center rounded-[10px] bg-primary px-9 text-[16px] font-bold leading-[23px] text-white hover:bg-[#0f49c0]"
+              >사전 인터뷰 신청</a
+            >
+            <a
+              href="#"
+              class="inline-flex h-[60px] items-center justify-center rounded-[10px] border border-[#FFFFFF33] bg-[#FFFFFF1A] px-9 text-[16px] font-bold leading-[23px] text-white hover:bg-white/20"
+              >카톡 채널</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer (8TqPk) -->
+      <footer id="contact" class="border-t border-[color:var(--hairline)] bg-panel2 scroll-mt-[96px]">
+        <div class="mx-auto max-w-[1200px] px-6 md:px-10 xl:px-0 py-[42px]">
+          <div class="flex flex-col gap-6">
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-10">
+              <div class="w-full md:w-[460px]">
+                <div class="flex items-center gap-2.5">
+                  <span class="material-symbols-outlined text-primary text-[24px] leading-none">explore</span>
+                  <span class="text-[16px] font-bold leading-[19px]">Project TRUE NORTH</span>
+                </div>
+                <p class="mt-3 max-w-[420px] text-[13px] leading-[22px] text-[#FFFFFF80]">
+                  실력 기반의 유학 교육 혁신. 우리는 더 나은 지성을 설계합니다.
+                </p>
+              </div>
+
+              <div class="flex gap-20">
+                <div class="flex flex-col gap-2.5">
+                  <div class="text-[14px] font-bold leading-[17px]">Contact</div>
+                  <div class="text-[13px] leading-[16px] text-[#FFFFFF80]">Seoul, Gangnam-gu</div>
+                  <div class="text-[13px] leading-[16px] text-[#FFFFFF80]">info@truenorth.edu</div>
+                </div>
+                <div class="flex flex-col gap-2.5">
+                  <div class="text-[14px] font-bold leading-[17px]">Social</div>
+                  <div class="text-[13px] leading-[16px] text-[#FFFFFF80]">Instagram</div>
+                  <div class="text-[13px] leading-[16px] text-[#FFFFFF80]">LinkedIn</div>
+                  <div class="text-[13px] leading-[16px] text-[#FFFFFF80]">Medium</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="h-px w-full bg-[color:var(--hairline)]"></div>
+
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 py-4">
+              <div class="text-[11px] font-medium leading-[13px] tracking-[1.2px] text-[#FFFFFF33]">
+                © 2026 PROJECT TRUE NORTH. ALL RIGHTS RESERVED.
+              </div>
+              <div class="text-[11px] font-medium leading-[13px] tracking-[1.2px] text-[#FFFFFF33]">
+                Programs · Philosophy · Faculty · Contact
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
