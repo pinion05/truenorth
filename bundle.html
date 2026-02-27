@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Design Ref Implementations 1.0.2 - Pages</title>
+    <style>
+      :root {
+        --bg: #070a12;
+        --panel: #0f1522;
+        --panel2: #101622;
+        --hair: rgba(255, 255, 255, 0.08);
+        --text: rgba(255, 255, 255, 0.92);
+        --muted: rgba(255, 255, 255, 0.6);
+        --primary: #1152d4;
+      }
+      * { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+        color: var(--text);
+        background: linear-gradient(180deg, #070a12 0%, #101622 55%, #05070d 100%);
+      }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: blur(10px);
+        background: rgba(7, 10, 18, 0.78);
+        border-bottom: 1px solid var(--hair);
+      }
+      .wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 16px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .brand { display: flex; align-items: baseline; gap: 10px; }
+      .brand b { font-size: 15px; letter-spacing: 0.4px; }
+      .brand span { font-size: 12px; color: var(--muted); letter-spacing: 1.2px; text-transform: uppercase; }
+      .nav { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+      .nav a {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 10px;
+        border: 1px solid var(--hair);
+        border-radius: 10px;
+        text-decoration: none;
+        color: var(--text);
+        background: rgba(16,22,34,0.6);
+      }
+      .nav a:hover { border-color: rgba(17, 82, 212, 0.55); }
+      .nav a strong { font-size: 12px; }
+      .nav a em { font-style: normal; font-size: 11px; color: var(--muted); }
+
+      main { padding: 18px 0 28px; }
+      .strip {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .hint {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 12px;
+        margin: 0 0 14px;
+      }
+      .hint h1 { margin: 0; font-size: 16px; letter-spacing: 0.2px; }
+      .hint p { margin: 0; font-size: 12px; color: var(--muted); }
+
+      .row {
+        display: flex;
+        gap: 18px;
+        overflow-x: auto;
+        padding: 14px;
+        border: 1px solid var(--hair);
+        border-radius: 16px;
+        background: rgba(15, 21, 34, 0.55);
+      }
+
+      .card {
+        flex: 0 0 auto;
+        width: 520px;
+        border-radius: 16px;
+        border: 1px solid rgba(255,255,255,0.10);
+        background: rgba(16, 22, 34, 0.85);
+        overflow: hidden;
+        text-decoration: none;
+        color: inherit;
+      }
+      .card:hover { border-color: rgba(17, 82, 212, 0.55); }
+
+      .cardHead {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        padding: 12px 14px;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+      }
+      .cardHead b { font-size: 13px; letter-spacing: 0.2px; }
+      .cardHead span { font-size: 11px; color: var(--muted); }
+
+      .preview {
+        position: relative;
+        height: 780px;
+        background: #0a0f1a;
+      }
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1920px;
+        height: 1400px;
+        border: 0;
+        transform: scale(0.27);
+        transform-origin: 0 0;
+        background: #0a0f1a;
+      }
+
+      footer {
+        max-width: 1200px;
+        margin: 18px auto 0;
+        padding: 0 20px;
+        color: var(--muted);
+        font-size: 11px;
+      }
+      code { color: rgba(255,255,255,0.75); }
+
+      @media (max-width: 720px) {
+        .card { width: 360px; }
+        .preview { height: 560px; }
+        iframe { transform: scale(0.19); }
+        .nav { justify-content: flex-start; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <div class="brand">
+          <b>Project TRUE NORTH</b>
+          <span>Design Ref Implementations 1.0.2 - Pages</span>
+        </div>
+        <nav class="nav">
+          <a href="home.html"><strong>Home</strong> <em>v1.0.2</em></a>
+          <a href="philosophy.html"><strong>Our Philosophy</strong> <em>v1.0.2</em></a>
+          <a href="programs.html"><strong>Programs</strong> <em>v1.0.2</em></a>
+          <a href="instructors.html"><strong>Instructors</strong> <em>v1.0.2</em></a>
+          <a href="contact.html"><strong>Contact</strong> <em>v1.0.2</em></a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="strip">
+        <div class="hint">
+          <h1>Pages Bundle</h1>
+          <p>각 카드를 클릭하면 해당 페이지로 이동합니다. 미리보기는 iframe 기반입니다.</p>
+        </div>
+
+        <div class="row">
+          <a class="card" href="home.html">
+            <div class="cardHead"><b>Home</b><span>home.html</span></div>
+            <div class="preview"><iframe loading="lazy" src="home.html" title="Home"></iframe></div>
+          </a>
+          <a class="card" href="philosophy.html">
+            <div class="cardHead"><b>Our Philosophy</b><span>philosophy.html</span></div>
+            <div class="preview"><iframe loading="lazy" src="philosophy.html" title="Our Philosophy"></iframe></div>
+          </a>
+          <a class="card" href="programs.html">
+            <div class="cardHead"><b>Programs</b><span>programs.html</span></div>
+            <div class="preview"><iframe loading="lazy" src="programs.html" title="Programs"></iframe></div>
+          </a>
+          <a class="card" href="instructors.html">
+            <div class="cardHead"><b>Instructors</b><span>instructors.html</span></div>
+            <div class="preview"><iframe loading="lazy" src="instructors.html" title="Instructors"></iframe></div>
+          </a>
+          <a class="card" href="contact.html">
+            <div class="cardHead"><b>Contact</b><span>contact.html</span></div>
+            <div class="preview"><iframe loading="lazy" src="contact.html" title="Contact"></iframe></div>
+          </a>
+        </div>
+      </div>
+
+      <footer>
+        Source: <code>design ref/code06_merged-fork-2.html</code> (patched for GitHub Pages)
+      </footer>
+    </main>
+  </body>
+</html>
