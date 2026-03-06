@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[97367,["/truenorth/_next/static/chunks/9f68d0da4b89c6d9.js","/truenorth/_next/static/chunks/a5f0067f415c457f.js","/truenorth/_next/static/chunks/d2be314c3ece3fbe.js"],"ViewportBoundary"]
+3:I[97367,["/truenorth/_next/static/chunks/9f68d0da4b89c6d9.js","/truenorth/_next/static/chunks/a5f0067f415c457f.js","/truenorth/_next/static/chunks/d2be314c3ece3fbe.js"],"MetadataBoundary"]
+4:"$Sreact.suspense"
+0:{"buildId":"QYnInJ4uEN93Y_DJQtSu0","rsc":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Project TRUE NORTH"}],["$","meta","1",{"name":"description","content":"입시를 넘어 유학 이후의 실력을 만드는 교육"}]]}]}]}],null]}],"loading":null,"isPartial":false}
