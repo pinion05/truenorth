@@ -1,0 +1,2 @@
+:HL["/truenorth/_next/static/chunks/d443f1b0b1526bdd.css","style"]
+0:{"buildId":"_mBeFHpt_7-zma8_h7eIO","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"programs","paramType":null,"paramKey":"programs","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
